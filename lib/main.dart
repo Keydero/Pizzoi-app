@@ -18,30 +18,20 @@ class _PizzoiState extends State<Pizzoi> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Pizzoi'),
+          title: Text('The Pizzoi'),
         ),
         body: Column(children: [
           Container(
             margin: EdgeInsets.all(10.0),
             child: RaisedButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  _products.add('Pizza Happy');
+                });
+              },
               child: Text('Ajouter un produit'),
             ),
           ),
-          Column(
-            children: _products
-                .map(
-                  (product) => Card(
-                        child: Column(
-                          children: <Widget>[
-                            Image.asset('assets/images/pizza.png'),
-                            Text(product)
-                          ],
-                        ),
-                      ),
-                )
-                .toList(),
-          )
         ]),
       ),
     );
