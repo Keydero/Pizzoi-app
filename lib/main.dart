@@ -6,11 +6,11 @@ class Pizzoi extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createElement
-    return _MyAppState();
+    return _PizzoiState();
   }
 }
 
-class _MyAppState extends State<Pizzoi> {
+class _PizzoiState extends State<Pizzoi> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
