@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(Home());
+void main() => runApp(Pizzoi());
 
 class Pizzoi extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class Pizzoi extends StatefulWidget {
 }
 
 class _PizzoiState extends State<Pizzoi> {
-  List<String> products = ['Pizza Tester'];
+  List<String> _products = ['Pizza Tester'];
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +28,20 @@ class _PizzoiState extends State<Pizzoi> {
               child: Text('Ajouter un produit'),
             ),
           ),
-          Card(
-            child: Column(
-              children: <Widget>[
-                Image.asset('assets/images/pizza.png'),
-                Text('Les pizzois!')
-              ],
-            ),
-          ),
+          Column(
+            children: _products
+                .map(
+                  (product) => Card(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/images/pizza.png'),
+                            Text(product)
+                          ],
+                        ),
+                      ),
+                )
+                .toList(),
+          )
         ]),
       ),
     );
