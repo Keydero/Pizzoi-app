@@ -11,8 +11,6 @@ class Pizzoi extends StatefulWidget {
 }
 
 class _PizzoiState extends State<Pizzoi> {
-  List<String> _products = ['Pizza Tester'];
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,19 +18,7 @@ class _PizzoiState extends State<Pizzoi> {
         appBar: AppBar(
           title: Text('The Pizzoi'),
         ),
-        body: Column(children: [
-          Container(
-            margin: EdgeInsets.all(10.0),
-            child: RaisedButton(
-              onPressed: () {
-                setState(() {
-                  _products.add('Pizza Happy');
-                });
-              },
-              child: Text('Ajouter un produit'),
-            ),
-          ),
-        ]),
+        body: Column(children: []),
       ),
     );
   }
