@@ -10,7 +10,23 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           title: Text('Pizzoi'),
         ),
-        body: Card(),
+        body: Column(children: [
+          Container(
+            margin: EdgeInsets.all(10.0),
+            child: RaisedButton(
+              onPressed: () {},
+              child: Text('Ajouter un produit'),
+            ),
+          ),
+          Card(
+            child: Column(
+              children: <Widget>[
+                Image.asset('assets/images/pizza.png'),
+                Text('Les pizzois!')
+              ],
+            ),
+          ),
+        ]),
       ),
     );
   }
