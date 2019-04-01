@@ -11,7 +11,7 @@ class Pizzoi extends StatelessWidget {
           appBar: AppBar(
             title: Text('The Pizzoi'),
           ),
-          body: ProductManager()),
+          body: ProductManager('Pizzoi Tester! R')),
     );
   }
 }
