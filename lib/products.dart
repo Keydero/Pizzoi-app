@@ -7,6 +7,9 @@ class Products extends StatelessWidget {
   Products(this.products, {this.deleteProduct}) {
     print('HELLO PRODUCT WIDGET');
   } // assign the injected products to products
+  void _emitDelete(response, index) {
+    return response == true ? deleteProduct(index) : null;
+  }
 
   Widget _buildProductItem(BuildContext context, int index) {
     return Card(
@@ -27,8 +30,7 @@ class Products extends StatelessWidget {
                               products[index]['title'],
                               products[index]['imageUrl']),
                         ),
-                      ).then((response) =>
-                          response == true ? deleteProduct(index) : null)
+                      ).then((response) => _emitDelete(response, index))
                     },
               )
             ],
