@@ -5,7 +5,7 @@ class Products extends StatelessWidget {
   Products(this.products); // assign the injected products to products
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: products
           .map(
             (product) => Card(
