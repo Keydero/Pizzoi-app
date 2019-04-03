@@ -9,6 +9,8 @@ class Product extends StatelessWidget {
         ),
         body: Center(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text('Details!'),
             RaisedButton(
