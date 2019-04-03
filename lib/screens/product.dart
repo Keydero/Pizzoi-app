@@ -19,8 +19,8 @@ class Product extends StatelessWidget {
               child: Text(title),
             ),
             RaisedButton(
-              child: Text('GO BACK'),
-              onPressed: () => Navigator.pop(context),
+              child: Text('Supprimer'),
+              onPressed: () => Navigator.pop(context, true),
             )
           ],
         ));

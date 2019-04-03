@@ -3,7 +3,8 @@ import './screens/product.dart';
 
 class Products extends StatelessWidget {
   final List<Map> products; // final == Not changeable
-  Products([this.products = const []]) {
+  final Function deleteProduct;
+  Products(this.products, {this.deleteProduct}) {
     print('HELLO PRODUCT WIDGET');
   } // assign the injected products to products
 
@@ -26,7 +27,8 @@ class Products extends StatelessWidget {
                               products[index]['title'],
                               products[index]['imageUrl']),
                         ),
-                      )
+                      ).then((response) =>
+                          response == true ? deleteProduct(index) : null)
                     },
               )
             ],
