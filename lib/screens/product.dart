@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Product extends StatelessWidget {
+  final String name;
+  final String imageUrl;
+  Product(this.name, this.imageUrl);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
