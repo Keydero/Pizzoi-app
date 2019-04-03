@@ -4,7 +4,7 @@ class Products extends StatelessWidget {
   final List<String> products; // final == Not changeable
   Products(this.products); // assign the injected products to products
 
-  _buildProductItem(BuildContext context, int index) {
+  Widget _buildProductItem(BuildContext context, int index) {
     return Card(
       child: Column(
         children: <Widget>[
