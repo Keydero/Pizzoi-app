@@ -8,7 +8,14 @@ class Product extends StatelessWidget {
           title: Text('Product Details'),
         ),
         body: Center(
-          child: Text('On the Product Page'),
-        ));
+            child: Column(
+          children: <Widget>[
+            Text('Details!'),
+            RaisedButton(
+              child: Text('GO BACK'),
+              onPressed: () => Navigator.pop(context),
+            )
+          ],
+        )));
   }
 }
