@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './screens/product.dart';
 
 class Products extends StatelessWidget {
-  final List<String> products; // final == Not changeable
+  final List<Map> products; // final == Not changeable
   Products([this.products = const []]) {
     print('HELLO PRODUCT WIDGET');
   } // assign the injected products to products
@@ -11,8 +11,8 @@ class Products extends StatelessWidget {
     return Card(
       child: Column(
         children: <Widget>[
-          Image.asset('assets/images/pizza.png'),
-          Text(products[index]),
+          Image.asset(products[index]['imageUrl']),
+          Text(products[index]['title']),
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -22,7 +22,9 @@ class Products extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) => Product(),
+                          builder: (BuildContext context) => Product(
+                              products[index]['title'],
+                              products[index]['imageUrl']),
                         ),
                       )
                     },

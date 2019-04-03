@@ -6,7 +6,8 @@ class ProductControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      onPressed: () => addProduct('Pizza'),
+      onPressed: () => addProduct(
+          {'title': 'Pizza Oriental', 'imageUrl': 'assets/images/pizza.png'}),
       child: Text('Ajouter un produit'),
     );
   }
